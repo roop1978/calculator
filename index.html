@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator">
+      <div class="theme-switch">
+        <label>
+            <input type="radio" name="theme" value="light" checked>
+            1
+        </label>
+        <label>
+            <input type="radio" name="theme" value="dark">
+            2
+        </label>
+        <label>
+            <input type="radio" name="theme" value="custom">
+            3
+        </label>
+    </div>
+    
+      <form>
+        <div class="display">
+          <input type="text" name="display" id="">
+        </div>
+
+        <div class="numpad">
+          <input type="button" value="7" id="number" onclick="display.value+='7' ">
+          <input type="button" value="8" id="number" onclick="display.value+='8' ">
+          <input type="button" value="9" id="number" onclick="display.value+='9' ">
+          <input type="button" value="DEL" id="number" onclick="display.value= display.value.toString().slice (0,-1)">
+
+
+        </div>
+        <div>
+          <input type="button" value="4" id="number" onclick="display.value+='4'">
+          <input type="button" value="5" id="number" onclick="display.value+='5'">
+          <input type="button" value="6" id="number" onclick="display.value+='6'">
+          <input type="button" value="+" id="number" class="operator" onclick="display.value+='+' ">
+
+
+        </div>
+        <div class="numpad">
+          <input type="button" value="1" id="number" onclick="display.value+='1'">
+          <input type="button" value="2" id="number" onclick="display.value+='2'">
+          <input type="button" value="3" id="number" onclick="display.value+='3'">
+          <input type="button" value="-" id="number" class="operator" onclick="display.value+='-' ">
+
+
+        </div>
+        <div class="numpad">
+          <input type="button" value="." id="number">
+          <input type="button" value="0" id="number" onclick="display.value+='0'">
+          <input type="button" value="/" id="number" class="operator" onclick="display.value+='/' ">
+          <input type="button" value="*" id="number" class="operator" onclick="display.value+='*' ">
+
+
+        </div>
+        <div class="lastrow" class="numpad-result">
+          <input type="button" value="RESET" id="red" onclick="display.value= '' ">
+          <input type="button" value="=" id="value" onclick="display.value=eval(display.value)">
+
+
+
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

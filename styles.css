@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+
+}
+
+.container {
+
+    width: 100%;
+    height: 100vh;
+    background-color: #3a4764;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background-color: #232C43;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.lastrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#red {
+    background-color: #232c43;
+    width: 100px;
+    height: 60px;
+}
+
+#red:hover {
+    background-color: #7B9CEF;
+    margin: 15px;
+}
+
+#value {
+    background-color: crimson;
+    width: 90px;
+    height: 60px;
+    margin: 12px;
+}
+
+#value:hover {
+    background-color: #EC7F73;
+}
+
+.calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgb(225, 225, 225, 0.1), 5px 5px 15px rgb(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+
+
+}
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+
+#number {
+    background-color: white;
+    color: black;
+    font-weight: 800;
+}
+
+/* Add styles for the theme switch */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+/* styling lable */
+.theme-switch {
+    --width: 80px;
+    --height: calc(var(--width) / 3);
+
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: var(--height);
+    cursor: pointer;
+}
+
+/* hiding checkbox */
+.theme-switch input {
+    display: none;
+}
+
+/* Creating slider */
+.theme-switch .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--height);
+    background-color: #ccc;
+    transition: all 0.4s ease-in-out;
+}
+
+.theme-switch .slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height));
+    height: calc(var(--height));
+    border-radius: calc(var(--height) / 2);
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Adding slider effect */
+.theme-switch input:checked+.slider {
+    background-color: #2196F3;
+}
+
+.theme-switch input:checked+.slider::before {
+    transform: translateX(calc(var(--width) - var(--height)));
+}
+
+.theme-switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.theme-switch label {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.theme-switch input[type="radio"] {
+    display: none;
+}
+
+.radio-button {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.radio-button:hover {
+    background-color: #777;
+}
+
+.theme-switch input[type="radio"]:checked+.radio-button {
+    background-color: #2196F3;
+    color: #fff;
+}

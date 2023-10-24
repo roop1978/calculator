@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+
+}
+
+.container {
+
+    width: 100%;
+    height: 100vh;
+    background-color: #160628;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background-color: #1D0934;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.lastrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#red {
+    background-color: #4a0768;
+    width: 120px;
+    height: 50px;
+    margin: 15px;
+    font-weight: 700;
+    color: yellow;
+}
+
+#red:hover {
+    background-color: #8032A4;
+    
+}
+
+#value {
+    background-color: cyan;
+    width: 120px;
+    height: 50px;
+    margin: 15px;
+    font-weight: 800;
+    color: black;
+}
+
+#value:hover {
+    background-color: rgba(185, 245, 245, 0.836);
+}
+
+.calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(217, 24, 220, 0.068), 5px 5px 15px rgb(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+
+
+}
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+
+#number {
+    background-color: #341C4F;
+    color: yellow;
+    font-weight: 800;
+}
+
+/* Add styles for the theme switch */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0f051b;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #0f051b;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+/* styling lable */
+.theme-switch {
+    --width: 80px;
+    --height: calc(var(--width) / 3);
+
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgb(161, 26, 161);
+    border-radius: var(--height);
+    cursor: pointer;
+}
+
+/* hiding checkbox */
+.theme-switch input {
+    display: none;
+}
+
+/* Creating slider */
+.theme-switch .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--height);
+    background-color: cyan;
+    transition: all 0.4s ease-in-out;
+}
+
+.theme-switch .slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height));
+    height: calc(var(--height));
+    border-radius: calc(var(--height) / 2);
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgb(190, 26, 176);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Adding slider effect */
+.theme-switch input:checked+.slider {
+    background-color: #2196F3;
+}
+
+.theme-switch input:checked+.slider::before {
+    transform: translateX(calc(var(--width) - var(--height)));
+}
+
+.theme-switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.theme-switch label {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.theme-switch input[type="radio"] {
+    display: none;
+}
+
+.radio-button {
+    width: 40px;
+    height: 20px;
+    background-color: #472e63;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.radio-button:hover {
+    background-color: #777;
+}
+
+.theme-switch input[type="radio"]:checked+.radio-button {
+    background-color: #160628;
+    color: #fff;
+}
