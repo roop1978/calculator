@@ -139,7 +139,7 @@ form .display input {
 }
 
 /* Additional media query for width 355px */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 360px) {
     .calculator {
         padding: 5px;
     }
